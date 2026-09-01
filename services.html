@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website service page</title>
+<!-- Style sheet -->
+    <link rel="stylesheet" href="style-sheet.css">
+
+</head>
+<body id="demo" style="color: var(--black-color); background-color: var(--white-color);">
+     
+<!-- navbar -->
+
+<nav id="navbar" class="navbar" style="background: linear-gradient(to right, var(--primary-color), var(--secondary-color));">
+    <div class="logo">
+        <a href="#">Logo</a>
+    </div> 
+    <ul class="nav-links">
+        <li><a href="http://127.0.0.1:5501/index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html"  class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+<!-- search bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search..." class="search-input">
+    </div>
+
+
+<!-- js btn of background color and text color -->
+
+<div class="btn-container">
+
+    <button class="btn" type="button" onclick="document.getElementById('demo').style.backgroundColor = 'var(--white-color)'" ><img src="https://png.pngtree.com/png-vector/20210823/ourmid/pngtree-dark-mode-icon-light-png-clipart-png-image_3811921.jpg" alt="Light Mode"></button>
+    
+    <button class="btn" type="button" onclick="document.getElementById('demo').style.backgroundColor = 'var(--black-color)'" ><img src="https://img.icons8.com/?size=64&id=oItmVyK4P1fj&format=png"></button>
+    
+</div>
+</nav>
+
+
+
+
+<!-- Hero section -->
+
+
+<div class="herom-section">
+    <h1>Our Services</h1>
+    <p>We provide a wide range of services to meet your needs.</p>
+    <img src="https://cdn.pixabay.com/photo/2015/10/30/10/45/service-1013724_1280.jpg">
+
+</div>
