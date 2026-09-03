@@ -1,154 +1,224 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website</title>
 
-    
-<!-- Style sheet -->
+
+    <!-- Style sheet -->
     <link rel="stylesheet" href="style-sheet.css">
 
-<style>
+    <style>
+        /* =====================
+   RESPONSIVE
+===================== */
 
-@media screen and (max-width: 768px) {
-    .cards {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
+        @media screen and (max-width: 768px) {
 
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+            /* Navbar */
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px 20px;
+                gap: 15px;
+            }
 
-    .nav-links {
-        flex-direction: column;
-        width: 100%;
-    }
+            .logo {
+                margin-right: 0;
+            }
 
-    .cards {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+            }
 
-    .card {
-        width: 100%;
-    }
+            /* Search Bar */
+            .search-bar {
+                width: 100%;
+                margin-left: 0;
+            }
 
-    .card img {
-        width: 100%;
-        height: auto;
-    }
+            .search-input {
+                width: 100%;
+            }
 
-    .card h3 {
-        font-size: 1.2rem;
-    }
+            .search-input:focus {
+                width: 100%;
+            }
 
-    .card p {
-        font-size: 0.9rem;
-    }
-}
-    
-    
+            /* Cards */
+            .cards {
+                padding: 1rem;
+            }
+
+            .card {
+                width: calc(50% - 2rem);
+            }
+
+            .card img {
+                width: 100%;
+                height: auto;
+            }
+
+            .card h3 {
+                font-size: 1.2rem;
+            }
+
+            .card p {
+                font-size: 0.9rem;
+            }
+
+            /* Hero */
+            .hero {
+                height: auto;
+                min-height: 70vh;
+                padding: 40px 20px;
+                font-size: 1.5rem;
+            }
+        }
 
 
+        /* Mobile phones */
+        @media screen and (max-width: 500px) {
 
+            .navbar {
+                padding: 15px;
+            }
 
+            .card {
+                width: 100%;
+                margin: 10px 0;
+            }
 
+            .nav-links {
+                gap: 5px;
+            }
 
+            .btn {
+                padding: 10px 15px;
+            }
 
+            .footer {
+                margin-top: 40px;
+            }
 
+            .cards {
+                padding: 0.5rem;
+            }
 
+            .card h3 {
+                font-size: 1rem;
+            }
 
+            .card p {
+                font-size: 0.8rem;
+            }
 
-
-
-
-
-
-
-</style>
+            .btn-container {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
 </head>
+
 <body id="demo" style="color: var(--black-color); background-color: var(--white-color);">
-     
-<!-- navbar -->
 
-<nav id="navbar" class="navbar" style="background: linear-gradient(to right, var(--primary-color), var(--secondary-color));">
-    <div class="logo">
-        <a href="#">Logo</a>
-    </div> 
-    <ul class="nav-links">
-        <li><a href="http://127.0.0.1:5501/index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <!-- navbar -->
 
-<!-- search bar -->
-    <div class="search-bar">
-        <input type="text" placeholder="Search..." class="search-input">
+    <nav id="navbar" class="navbar"
+        style="background: linear-gradient(to right, var(--primary-color), var(--secondary-color));">
+        <div class="logo">
+            <a href="#">Logo</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="http://127.0.0.1:5501/index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- search bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." class="search-input">
+        </div>
+
+
+        <!-- js btn of background color and text color -->
+
+        <div class="btn-container">
+
+            <button class="btn" type="button"
+                onclick="document.getElementById('demo').style.backgroundColor = 'var(--white-color)'"><img
+                    src="https://png.pngtree.com/png-vector/20210823/ourmid/pngtree-dark-mode-icon-light-png-clipart-png-image_3811921.jpg"
+                    alt="Light Mode"></button>
+
+            <button class="btn" type="button"
+                onclick="document.getElementById('demo').style.backgroundColor = 'var(--black-color)'"><img
+                    src="https://img.icons8.com/?size=64&id=oItmVyK4P1fj&format=png"></button>
+
+        </div>
+    </nav>
+
+    <!-- hero section -->
+    <section class="hero">
+        <h1 style="color: var(--white-color);">Welcome to Our Website</h1>
+        <p style="color: var(--white-color);">This is a simple hero section.</p>
+        <h1 style="color: var(--black-color);">Welcome to Our Website</h1>
+        <p>This is a simple hero section.</p>
+    </section>
+
+
+    <!-- cards -->
+    <div id="demo" class="cards">
+        <div class="card">
+            <img src="https://www.countryflags.com/wp-content/uploads/south-korea-flag-png-large.png" alt="Card Image"
+                style="width: 100%; height: auto; border-radius: 5px;">
+            <h3>Card <span class="super">1</span></h3>
+            <p>This is a simple card.</p>
+        </div>
+        <div class="card">
+            <img src="https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png"
+                alt="Card Image" style="width: 100%; height: auto; border-radius: 5px;">
+            <h3>Card 2</h3>
+            <p>This is a simple card.</p>
+        </div>
+        <div class="card">
+            <img src="https://www.countryflags.com/wp-content/uploads/united-states-of-america-flag-png-large.png"
+                alt="Card Image" style="width: 100%; height: auto; border-radius: 5px;">
+            <h3>Card 3</h3>
+            <p>This is a simple card.</p>
+        </div>
+        <div class="card">
+            <img src="https://www.countryflags.com/wp-content/uploads/arab-league-flag-jpg-xl-1536x1024.jpg"
+                alt="Card Image" style="width: 100%; height: auto; border-radius: 5px;">
+            <h3>Card 4</h3>
+            <p>This is a simple card.</p>
+        </div>
+        <div class="card">
+            <img src="https://www.countryflags.com/wp-content/uploads/china-flag-png-large.png" alt="Card Image"
+                style="width: 100%; height: auto; border-radius: 5px;">
+            <h3>Card 5</h3>
+            <p>This is a simple card.</p>
+        </div>
+        <div class="card">
+            <img src="https://www.countryflags.com/wp-content/uploads/pakistan-flag-png-large.png" alt="Card Image"
+                style="width: 100%; height: auto; border-radius: 5px;">
+            <h3>Card 6</h3>
+            <p>This is a simple card.</p>
+        </div>
     </div>
 
 
-<!-- js btn of background color and text color -->
-
-<div class="btn-container">
-
-    <button class="btn" type="button" onclick="document.getElementById('demo').style.backgroundColor = 'var(--white-color)'" ><img src="https://png.pngtree.com/png-vector/20210823/ourmid/pngtree-dark-mode-icon-light-png-clipart-png-image_3811921.jpg" alt="Light Mode"></button>
-    
-    <button class="btn" type="button" onclick="document.getElementById('demo').style.backgroundColor = 'var(--black-color)'" ><img src="https://img.icons8.com/?size=64&id=oItmVyK4P1fj&format=png"></button>
-    
-</div>
-</nav>
-
-<!-- hero section -->
-<section class="hero">
-    <h1 style="color: var(--white-color);">Welcome to Our Website</h1>
-    <p style="color: var(--white-color);">This is a simple hero section.</p>
-    <h1 style="color: var(--black-color);">Welcome to Our Website</h1>
-    <p>This is a simple hero section.</p>
-</section>
 
 
-<!-- cards -->
-<div id="demo" class="cards">
-    <div class="card">
-        <img src="https://www.countryflags.com/wp-content/uploads/south-korea-flag-png-large.png" alt="Card Image" style="width: 100%; height: auto; border-radius: 5px;">
-        <h3>Card <span class="super">1</span></h3>
-        <p>This is a simple card.</p>
-    </div>
-    <div class="card">
-              <img src="https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png" alt="Card Image" style="width: 100%; height: auto; border-radius: 5px;">
-        <h3>Card 2</h3>
-        <p>This is a simple card.</p>
-    </div>
-    <div class="card">
-        <img src="https://www.countryflags.com/wp-content/uploads/united-states-of-america-flag-png-large.png" alt="Card Image" style="width: 100%; height: auto; border-radius: 5px;">
-        <h3>Card 3</h3>
-        <p>This is a simple card.</p>
-    </div>
-    <div class="card">
-        <img src="https://www.countryflags.com/wp-content/uploads/arab-league-flag-jpg-xl-1536x1024.jpg" alt="Card Image" style="width: 100%; height: auto; border-radius: 5px;">
-        <h3>Card 4</h3>
-        <p>This is a simple card.</p>
-    </div>   
-     <div class="card">
-        <img src="https://www.countryflags.com/wp-content/uploads/china-flag-png-large.png" alt="Card Image" style="width: 100%; height: auto; border-radius: 5px;">
-        <h3>Card 5</h3>
-        <p>This is a simple card.</p>
-    </div>   
-     <div class="card">
-        <img src="https://www.countryflags.com/wp-content/uploads/pakistan-flag-png-large.png" alt="Card Image" style="width: 100%; height: auto; border-radius: 5px;">
-        <h3>Card 6</h3>
-        <p>This is a simple card.</p>
-    </div>
-</div>
-
-
-
-
-<!-- footer -->
-<footer class="footer" style="background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); color: var(--white-color); text-align: center; padding: 1rem;">
-    <p>&copy; 2023 Your Company. All rights reserved.</p>
-</footer>
+    <!-- footer -->
+    <footer class="footer"
+        style="background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); color: var(--white-color); text-align: center; padding: 1rem;">
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
 
 
 
@@ -156,4 +226,5 @@
 
 
 </body>
+
 </html>
