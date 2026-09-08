@@ -606,3 +606,11 @@ body {
   border-radius: 10px;
 
 }
+
+
+.thankyouforvisiting {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2rem;
+  color: var(--primary-color);
+}

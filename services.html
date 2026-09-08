@@ -11,7 +11,6 @@
 
 @media screen and (max-width: 768px) {
 
-            /* Navbar */
             .navbar {
                 flex-direction: column;
                 align-items: flex-start;
@@ -29,7 +28,6 @@
                 gap: 10px;
             }
 
-            /* Search Bar */
             .search-bar {
                 width: 100%;
                 margin-left: 0;
@@ -42,14 +40,36 @@
             .search-input:focus {
                 width: 100%;
             }
-        }
+
+            .logo {
+                margin-bottom: 10px;
+            }
+
+            /* hero responsive */
+
+            .herom-section {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .herom-section-image {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .herom-section-image h1 {
+                font-size: 1.5rem;
+            }
+
+            .herom-section-image p {
+                font-size: 1rem;
+            }
 
 
 
 
-
-
-
+}
 
     </style>
 </head>
@@ -91,13 +111,27 @@
 <!-- Hero section -->
 
 
-<div class="herom-section">
-<div class="herom-section-image">
+<div class="herom-section contact-cards">
 
+    <div class="herom-section-image contact-card">
     <p>Visit our services</p>
 
-</div>
-        <h1>Our Services</h1>
+    <h1>Our Services</h1>
     <p>We provide a wide range of services to meet your needs.</p>
 
+
+
+</div>
+
+<div class="herom-section-image contact-card">
+    <p>Contact us for more information</p>
+
+    <h1>Get in Touch</h1>
+    <p>Feel free to reach out to us for any inquiries or support.</p>
+
+</div>
+
+<div class="thankyouforvisiting">
+<h1>Thank you for visiting our services page!</h1>
+</div>
 </div>
