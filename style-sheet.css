@@ -395,9 +395,8 @@ body {
 }
 
 
-/* =========================
-   HERO OVERLAY
-========================= */
+
+/*HERO OVERLAY*/
 
 .hero-of-contact-page::after {
     content: "";
@@ -410,13 +409,10 @@ body {
             rgba(0, 0, 0, 0.25),
             rgba(0, 0, 0, 0.75)
         );
-    pointer-events: none;
 }
 
 
-/* =========================
-   HERO TEXT
-========================= */
+/*HERO TEXT*/
 
 .main-content {
     position: absolute;
@@ -478,35 +474,14 @@ body {
 }
 
 
-/* Your inline h1 */
-
-body > h1.bold {
-    max-width: 900px;
-    margin:
-        50px auto 20px !important;
-    padding:
-        0 20px !important;
-    color:
-        var(--black-color) !important;
-    text-shadow:
-        none !important;
-    font-size:
-        clamp(1.7rem, 4vw, 2.5rem) !important;
-    line-height: 1.4 !important;
-}
-
-
 /* cards */
 
 .contact-cards {
     max-width: 1200px;
-    margin:
-        0 auto 70px;
-    padding:
-        20px;
+    margin:0 auto 70px;
+    padding:20px;
     display: grid;
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns:repeat(3, 1fr);
     gap: 25px;
 }
 
@@ -583,28 +558,6 @@ body > h1.bold {
 }
 
 
-/* =========================
-   FOOTER
-========================= */
-
-.footer {
-    margin-top: 50px;
-
-    padding: 25px !important;
-
-    color: var(--white-color);
-
-    text-align: center;
-}
-
-.footer p {
-    font-family: "Roboto", sans-serif;
-
-    font-weight: 500;
-}
-
-
-
 
 /* Hero of Services Page */
 
@@ -621,6 +574,8 @@ body > h1.bold {
   line-height: 1.5;
   text-shadow: -1px 0px 1px rgb(255, 255, 255);
   color: rgb(163, 152, 152);
+
+
 }
 
 .herom-section h1 {
@@ -633,9 +588,21 @@ body > h1.bold {
   margin-bottom: 2rem;
 }
 
+.herom-section-image {
+  background: url('https://cdn.pixabay.com/photo/2015/10/30/10/45/service-1013724_1280.jpg') center center no-repeat;
+  background-size: 50%, cover;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.herom-section-image:hover {
+  transform: scale(1.05);
+}
+
 .herom-section img {
-  width: 54%;
-  height: 90%;
+  width: 60%;
   margin-bottom: 2rem;
   border-radius: 10px;
+
 }
