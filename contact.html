@@ -13,9 +13,9 @@
 
     <link rel="stylesheet" href="style-sheet.css">
 
-<style>
+    <style>
         /*RESPONSIVE*/
-@media screen and (max-width: 768px) {
+        @media screen and (max-width: 768px) {
 
             /* Navbar */
             .navbar {
@@ -49,15 +49,40 @@
                 width: 100%;
             }
 
-            .card {
-                width: 100%;
-                display: flex;
+            /* hero responsive */
+            .hero-of-contact-page {
                 flex-direction: column;
-                justify-content: center;
                 align-items: center;
+                gap: 20px;
             }
 
-      
+            .hero-of-contact-page img {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            /* cards responsive */
+
+            .contact-cards {
+                flex-direction: reverse-column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .contact-card {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .contact-card h2 {
+                font-size: 1.5rem;
+            }
+
+            .contact-card p {
+                font-size: 1rem;
+                flex-direction: column;
+            }
+
         }
     </style>
 
@@ -70,7 +95,7 @@
 
 
 
-</style>
+    </style>
 </head>
 
 <body id="demo" style="color: var(--black-color); background-color: var(--white-color);">
@@ -137,8 +162,8 @@
 
 
     <!-- contact cards -->
-    <h1
-        style="text-align: center; font-size: 2rem; margin-top: 2rem; padding: 2rem; line-height: 1.5; text-shadow: -1px 0px 1px rgb(255, 255, 255); color: rgb(163, 152, 152);" class="bold">
+    <h1 style="text-align: center; font-size: 2rem; margin-top: 2rem; padding: 2rem; line-height: 1.5; text-shadow: -1px 0px 1px rgb(255, 255, 255); color: rgb(163, 152, 152);"
+        class="bold">
         Well we have so many ways to contact us,<br> here are some of them!</h1>
 
     <div class="contact-cards bold">
